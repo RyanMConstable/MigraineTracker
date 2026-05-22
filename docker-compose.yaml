@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: migraine-frontend
+    container_name: migraine-frontend
+    entrypoint: ["npm", "run", "dev"]
+    ports:
+      - 80:3000
+    volumes:
+      - ./frontend/migraine-frontend/:/migraine-frontend
+    build:
+      context: ./frontend
